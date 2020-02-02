@@ -1,0 +1,46 @@
+<div class="post_card_details" style="padding: 25px;margin-bottom: 30px;">
+    <ul class="profile_image">
+        <li>
+            <img [src]=card_details.profile_picture class="profile_pic noMargin">
+        </li>
+        <li class="name_place">
+            <p style="font-size: 16px;">{{card_details.user_name}}</p>
+            <p style="font-weight: bold;" [innerHTML]="card_details.last_visited"></p>
+        </li>
+    </ul>
+    <h4 class="mt30" style="color: #757575;">{{card_details.description}}</h4>
+    <hr class="mt30" style="border: 1px solid #efefef;">
+    <div *ngIf="card_details.type === 1">
+        <h5 class="bold mb20">Liked by:</h5>
+        <ul class="profile_image">
+            <li>
+                <img [src]=card_details.likes.liked_by[0] class="profile_pic_1 noMargin">
+            </li>
+            <li class="name_place">
+                <img [src]=card_details.likes.liked_by[1] class="profile_pic_1 noMargin">
+            </li>
+            <li class="name_place">
+                <img [src]=card_details.likes.liked_by[2] class="profile_pic_1 noMargin">
+            </li>
+            <li>
+                <i class="fas fa-heart inline ml20 heart_glow" style="font-size: x-large;"></i>
+                <h4 style="display: inline;  margin-left: 10px;  vertical-align: 3px;">
+                    {{card_details.likes.total_likes_count}}</h4>
+            </li>
+        </ul>
+        <hr class="mt30" style="border: 1px solid #efefef;">
+        <h5 class="bold mb20">Comment: </h5>
+        <div *ngFor='let comment of card_details.main_comment'>
+            <app-main-comment [comment]=comment></app-main-comment>
+        </div>
+    </div>
+    <div *ngIf="card_details.type === 2" style="text-align: center;">
+        <img [src]=card_details.media_file class=" noMargin">
+    </div>
+</div>
+
+
+<h2>{{sample_test}}</h2>
+<!-- <div class="mt30">
+  
+</div> -->

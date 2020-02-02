@@ -1,0 +1,45 @@
+<div class="col-lg-8 second_column">
+  <!-- <div class="post_card_details" style="padding: 25px;">
+    <ul class="profile_image">
+      <li>
+        <img src="assets/images/author-main1.jpg" class="profile_pic noMargin">
+      </li>
+      <li class="name_place">
+        <p style="font-size: 16px;">James Spiegel</p>
+        <p style="font-weight: bold;">10 hrs ago</p>
+      </li>
+    </ul>
+    <app-postCard1></app-postCard1>
+    <hr class="mt30" style="border: 1px solid #efefef;">
+    <div>
+      <i class="fas fa-heart" style="font-size: x-large;"></i>
+    </div>
+  </div>
+  <div class="post_card_details_1 mt30" style="padding: 25px;">
+    <ul class="profile_image" style="margin-bottom: 30px;">
+      <li>
+        <img src="assets/images/author-main1.jpg" class="profile_pic noMargin">
+      </li>
+      <li class="name_place">
+        <p style="font-size: 16px;">James Spiegel</p>
+        <p style="font-weight: bold;">10 hrs ago</p>
+      </li>
+    </ul>
+    <app-postCard2></app-postCard2>
+    <hr class="mt30" style="border: 1px solid #efefef;">
+    <div>
+      <i class="fas fa-heart" style="font-size: x-large;"></i>
+    </div>
+  </div> -->
+  <div>
+    <app-post-card-form></app-post-card-form>
+  </div>
+  <div *ngFor='let card_details of card_details1'>
+    <app-post-card3 [card_details]=card_details></app-post-card3>
+  </div>
+  <!-- <div class="post_card_details mt30" style="padding: 25px;">
+  </div> -->
+  <!-- <div class="post_card_details mt30" style="padding: 25px;">
+    <app-post-card4 [card_details] = card_details1></app-post-card4>    
+  </div> -->
+</div>

@@ -1,0 +1,21 @@
+.nav-tabs>li >a {
+    color: white;
+}
+.nav-tabs>li.active>a {
+    background: none;
+    color: white;
+    font-weight: bold;
+    font-size: medium;
+    border: none;
+}
+.nav-tabs>li.active {
+    border-bottom: 1px solid white;
+    margin: 0px;
+}
+.nav-tabs>li>a:hover {
+    color: black;
+    font-weight: bold;
+}
+.nav-tabs {
+    border: none;
+}
