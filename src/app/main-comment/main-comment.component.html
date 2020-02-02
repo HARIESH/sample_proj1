@@ -1,0 +1,25 @@
+<div style="border: 1px solid gainsboro;padding: 20px;" class="mb20">
+    <ul class="profile_image">
+        <li>
+            <img [src]=comment.profile_image class="profile_pic noMargin">
+        </li>
+        <li class="name_place">
+            <p style="font-size: 16px; color: green !important;">{{comment.user_name}}</p>
+        </li>
+    </ul>
+    <h4 class="mt20" style="color: #757575;">{{comment.description}}</h4>
+    <h5 class="bold mt30 ml20">Sub Comments:</h5>
+    <div *ngFor="let sub_comment of comment.sub_comment">
+        <div style="background: #f7f7f7;padding: 10px;" class="mb20 ml20">
+            <ul class="profile_image">
+                <li>
+                    <img [src]=sub_comment.user_image class="profile_pic noMargin">
+                </li>
+                <li class="name_place">
+                    <p style="font-size: 16px; color: chocolate !important;">{{sub_comment.name}}</p>
+                </li>
+            </ul>
+            <h4 class="mt20" style="color: #757575;">{{sub_comment.description}}</h4>
+        </div>
+    </div>
+</div>
