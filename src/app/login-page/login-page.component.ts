@@ -17,7 +17,8 @@ export class LoginPageComponent implements OnInit {
   }
 
   openHomePage() {
-    this.router.navigate(['/home/all_post']);
+    // this.router.navigate(['/home/all_post']);
+    this.router.navigate(['/']);
   }
 
 }
